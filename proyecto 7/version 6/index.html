@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Venta de Donuts - MaDona Supermercado</title>
+    <!-- Fuente Roboto para estilos modernos -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS para utilidades de diseño (opcional, no se usa en este CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="misEstilos.css">
+    <!-- Script principal con la lógica de ventas -->
+    <script src="misScripts.js"></script>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            background: #f6f6f6;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor principal centrado y con sombra */
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            padding: 32px 24px;
+        }
+
+        /* Cabecera con título y emojis */
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #2d7a2d;
+            margin: 0;
+        }
+
+        .header span {
+            font-size: 2.5rem;
+        }
+
+        /* Estilos para etiquetas de los inputs */
+        label {
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* Estilos para los inputs de ventas */
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        /* Estilos para el botón de calcular */
+        button {
+            width: 100%;
+            background: #2d7a2d;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #256025;
+        }
+
+        /* Salida de resultados de ventas */
+        #parrafoSalida {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #2d7a2d;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onload="crearTiendas('itemsTiendas', 0, 6)">
+    <div class="container">
+        <!-- Cabecera con nombre y emojis de supermercado -->
+        <div class="header">
+            <span>&#127849;</span>
+            <h1>Ventas MaDona</h1>
+            <span>&#127849;</span>
+            <p style="color:#888; margin-top:8px;">Supermercado</p>
+        </div>
+        <!-- Aquí se generan dinámicamente los inputs de ventas de cada tienda -->
+        <div id="itemsTiendas"></div>
+        <!-- Aquí se muestra el resultado del cálculo de ventas -->
+        <div id="parrafoSalida"></div>
+        <!-- Botón para calcular los resultados -->
+        <button onclick="calcular()">Calcular</button>
+    </div>
+</body>
+
+</html>
