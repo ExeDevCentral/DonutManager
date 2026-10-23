@@ -5,3 +5,17 @@
 .menuInputMenor {
     background-color: lightsalmon;
 }
+@media (max-width: 600px) {
+    .container {
+        max-width: 100% !important;
+        margin: 10px auto !important;
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+    }
+    input, select, button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        min-height: 48px !important;
+        font-size: 16px !important;
+    }
+}
