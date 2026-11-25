@@ -45,4 +45,4 @@ xdg-open "proyecto 7/version 4/index.html"
 
 <!-- ExeDevCentral Audit & Quality Stamp: 2026-11-14 (Phase 10/10) -->
 
-_Última revisión: 2026-11-24 23:44_
+_Última revisión: 2026-11-25 20:05_
